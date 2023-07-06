@@ -6,7 +6,7 @@ orgs.newOrg('eclipse-orbit') {
     default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Provides infrastructure for redistributing third-party libraries as OSGi bundles via p2 repositories.",
-    email: "orbit-dev@eclipse.org",
+    email: "orbit-dev-change@eclipse.org",
     name: "Eclipse Orbit",
     packages_containers_internal: false,
     packages_containers_public: false,
