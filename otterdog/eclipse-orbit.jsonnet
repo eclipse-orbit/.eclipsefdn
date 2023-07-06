@@ -42,14 +42,5 @@ orgs.newOrg('eclipse-orbit') {
         },
       ],
     },
-    orgs.newRepo('orbit') {
-      allow_merge_commit: false,
-      allow_update_branch: false,
-      description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
-      has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
-      web_commit_signoff_required: false,
-    },
   ],
 }
