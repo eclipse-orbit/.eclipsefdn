@@ -14,6 +14,9 @@ orgs.newOrg('eclipse-orbit') {
     packages_containers_public: false,
     readers_can_create_discussions: true,
     web_commit_signoff_required: false,
+    workflows+: {
+      actions_can_approve_pull_request_reviews: false,
+    },
   },
   _repositories+:: [
     orgs.newRepo('.github') {
