@@ -20,12 +20,14 @@ orgs.newOrg('eclipse-orbit') {
   },
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
       description: "Global configurations for the eclipse-orbit GitHub organization",
     },
     orgs.newRepo('ebr') {
       allow_auto_merge: true,
-      allow_merge_commit: false,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Eclipse Bundle Recipe infrastructure.",
       has_projects: false,
       has_wiki: false,
@@ -46,24 +48,24 @@ orgs.newOrg('eclipse-orbit') {
       ],
     },
     orgs.newRepo('orbit') {
-      allow_merge_commit: false,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('orbit-legacy') {
-      allow_merge_commit: false,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Third-party libraries not available with source code elsewhere.",
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
     },
     orgs.newRepo('orbit-simrel') {
-      allow_merge_commit: false,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Third-party libraries bundled using Maven target locations.",
       has_discussions: true,
       has_wiki: false,
