@@ -25,6 +25,7 @@ orgs.newOrg('eclipse-orbit') {
       description: "Global configurations for the eclipse-orbit GitHub organization",
     },
     orgs.newRepo('ebr') {
+      archived: true,
       allow_auto_merge: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -48,6 +49,7 @@ orgs.newOrg('eclipse-orbit') {
       ],
     },
     orgs.newRepo('orbit') {
+      archived: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
