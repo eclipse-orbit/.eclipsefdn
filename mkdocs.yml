@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-orbit.github.io/.eclipsefdn/
 
+repo_name: eclipse-orbit/.eclipsefdn
+repo_url: https://github.com/eclipse-orbit/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
