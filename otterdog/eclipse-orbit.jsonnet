@@ -3,7 +3,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('eclipse-orbit') {
   settings+: {
     blog: "https://eclipse.dev/orbit",
-    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Provides infrastructure for redistributing third-party libraries as OSGi bundles via p2 repositories.",
     discussion_source_repository: "eclipse-orbit/orbit-simrel",
@@ -23,6 +22,9 @@ orgs.newOrg('eclipse-orbit') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       description: "Global configurations for the eclipse-orbit GitHub organization",
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('ebr') {
       archived: true,
@@ -33,6 +35,9 @@ orgs.newOrg('eclipse-orbit') {
       has_projects: false,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
@@ -56,6 +61,9 @@ orgs.newOrg('eclipse-orbit') {
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('orbit-legacy') {
       allow_update_branch: false,
@@ -64,6 +72,9 @@ orgs.newOrg('eclipse-orbit') {
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
     orgs.newRepo('orbit-simrel') {
       allow_update_branch: false,
@@ -72,6 +83,9 @@ orgs.newOrg('eclipse-orbit') {
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
     },
   ],
 }
