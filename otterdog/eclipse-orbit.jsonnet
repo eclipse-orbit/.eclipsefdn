@@ -38,20 +38,6 @@ orgs.newOrg('eclipse-orbit') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
     },
     orgs.newRepo('orbit') {
       archived: true,
