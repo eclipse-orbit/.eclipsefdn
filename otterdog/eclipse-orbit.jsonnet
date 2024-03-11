@@ -22,34 +22,22 @@ orgs.newOrg('eclipse-orbit') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       description: "Global configurations for the eclipse-orbit GitHub organization",
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('ebr') {
       archived: true,
-      allow_auto_merge: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
       description: "Eclipse Bundle Recipe infrastructure.",
       has_projects: false,
       has_wiki: false,
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('orbit') {
       archived: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
       description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
       has_discussions: true,
       has_wiki: false,
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('orbit-legacy') {
       allow_update_branch: false,
@@ -58,9 +46,6 @@ orgs.newOrg('eclipse-orbit') {
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
     orgs.newRepo('orbit-simrel') {
       allow_update_branch: false,
@@ -69,9 +54,6 @@ orgs.newOrg('eclipse-orbit') {
       has_discussions: true,
       has_wiki: false,
       web_commit_signoff_required: false,
-      workflows+: {
-        actions_can_approve_pull_request_reviews: false,
-      },
     },
   ],
 }
