@@ -27,7 +27,6 @@ orgs.newOrg('eclipse-orbit') {
       description: "Eclipse Bundle Recipe infrastructure.",
       has_projects: false,
       has_wiki: false,
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('orbit') {
@@ -35,7 +34,6 @@ orgs.newOrg('eclipse-orbit') {
       description: "Third-party libraries bundled using Eclipse Bundle Recipes.",
       has_discussions: true,
       has_wiki: false,
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('orbit-legacy') {
